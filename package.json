@@ -2,7 +2,7 @@
   "name": "vite-plugin-shim-react-pdf",
   "version": "1.0.0",
   "description": "A shim that allows React PDF to be used with Vite",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": "https://github.com/TechInSite/vite-plugin-shim-react-pdf.git",
   "author": "Kevin Brown <kevin.brown@techin.site>",
   "license": "MIT",

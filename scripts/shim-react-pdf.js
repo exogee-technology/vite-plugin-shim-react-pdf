@@ -4,7 +4,7 @@
 
 const fs = require("fs");
 
-const banner = "// Injected by shim-react-pdf.js";
+const banner = "/* Injected by vite-plugin-shim-react-pdf */";
 
 const prependFile = (nodeResolutionPath, prependContent) => {
   const path = require.resolve(nodeResolutionPath);
