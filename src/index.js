@@ -18,7 +18,7 @@ module.exports = () => ({
       ...config.resolve.alias,
 
       process: "process/browser",
-      stream: "readable-stream",
+      stream: "vite-compatible-readable-stream",
       zlib: "browserify-zlib",
     };
   },

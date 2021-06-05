@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-shim-react-pdf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A shim that allows React PDF to be used with Vite",
   "main": "src/index.js",
   "repository": "https://github.com/TechInSite/vite-plugin-shim-react-pdf.git",
@@ -17,8 +17,8 @@
     "events": "3.3.0",
     "iconv-lite": "0.6.3",
     "process": "0.11.10",
-    "readable-stream": "TechInSite/readable-stream#registry",
-    "util": "0.12.4"
+    "util": "0.12.4",
+    "vite-compatible-readable-stream": "3.6.0"
   },
   "peerDependencies": {
     "@react-pdf/renderer": "^2.0.0",
