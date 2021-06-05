@@ -61,6 +61,7 @@ prependFiles(
     "@react-pdf/font/lib/index.browser.js",
     "restructure/src/DecodeStream.js",
     "restructure/src/EncodeStream.js",
+    "restructure/src/String.js",
   ],
   `const { Buffer } = require('buffer');`
 );
