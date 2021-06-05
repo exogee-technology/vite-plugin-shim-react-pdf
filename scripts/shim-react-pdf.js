@@ -50,3 +50,10 @@ prependFile(
     window.Buffer = Buffer;
   `
 );
+prependFile(
+  "@react-pdf/renderer",
+  `
+    const { Buffer } = require('buffer');
+    window.Buffer = Buffer;
+  `
+);
