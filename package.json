@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "postinstall": "node vite-plugin-shim-react-pdf/scripts/shim-react-pdf.js"
+    "postinstall": "node scripts/shim-react-pdf.js"
   },
   "dependencies": {
     "browserify-zlib": "0.2.0",
