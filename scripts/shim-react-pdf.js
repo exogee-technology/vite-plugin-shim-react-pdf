@@ -50,10 +50,14 @@ prependFiles(
 
 // Buffer a go go
 prependFiles(
-  ["@react-pdf/pdfkit/lib/pdfkit.browser.es.js", "@react-pdf/font/src/font.js"],
+  "@react-pdf/pdfkit/lib/pdfkit.browser.es.js",
   "import { Buffer } from 'buffer';"
 );
 prependFiles(
-  ["restructure/src/DecodeStream.js", "restructure/src/EncodeStream.js"],
+  [
+    "@react-pdf/font/lib/index.browser.js",
+    "restructure/src/DecodeStream.js",
+    "restructure/src/EncodeStream.js",
+  ],
   `const { Buffer } = require('buffer');`
 );
