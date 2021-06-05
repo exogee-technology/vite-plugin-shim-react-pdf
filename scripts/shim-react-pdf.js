@@ -49,6 +49,7 @@ prependFiles(
 );
 
 // Buffer a go go
+prependFiles("@react-pdf/pdfkit", "import { Buffer } from 'buffer'");
 prependFiles(
   ["restructure/src/DecodeStream.js", "restructure/src/EncodeStream.js"],
   `const { Buffer } = require('buffer');`
