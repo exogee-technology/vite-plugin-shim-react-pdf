@@ -267,9 +267,9 @@ process@0.11.10:
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
 
-readable-stream@TechInSite/readable-stream:
+readable-stream@TechInSite/readable-stream#registry:
   version "3.6.0"
-  resolved "https://codeload.github.com/TechInSite/readable-stream/tar.gz/229e862e3f0c38676b630f61618307254c0d9453"
+  resolved "https://codeload.github.com/TechInSite/readable-stream/tar.gz/b2879b8560b91c273209cb1a0b6cfdafa00dfaa2"
   dependencies:
     inherits "^2.0.3"
     string_decoder "^1.1.1"

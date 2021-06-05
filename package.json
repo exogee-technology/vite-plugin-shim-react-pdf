@@ -17,7 +17,7 @@
     "events": "3.3.0",
     "iconv-lite": "0.6.3",
     "process": "0.11.10",
-    "readable-stream": "TechInSite/readable-stream",
+    "readable-stream": "TechInSite/readable-stream#registry",
     "util": "0.12.4"
   },
   "peerDependencies": {
