@@ -269,7 +269,7 @@ process@0.11.10:
 
 readable-stream@TechInSite/readable-stream:
   version "3.6.0"
-  resolved "https://codeload.github.com/TechInSite/readable-stream/tar.gz/ab8b120487cfb40bcc4038a87c2cea4e59fa12ca"
+  resolved "https://codeload.github.com/TechInSite/readable-stream/tar.gz/229e862e3f0c38676b630f61618307254c0d9453"
   dependencies:
     inherits "^2.0.3"
     string_decoder "^1.1.1"
