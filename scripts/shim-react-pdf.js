@@ -60,6 +60,7 @@ prependFiles(
 prependFiles(
   [
     "@react-pdf/font/lib/index.browser.js",
+    "@react-pdf/image/lib/index.browser.js",
     "restructure/src/DecodeStream.js",
     "restructure/src/EncodeStream.js",
     "restructure/src/String.js",
