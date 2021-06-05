@@ -39,16 +39,20 @@ const prependFiles = (nodeResolutionPaths, prependContent) => {
   }
 };
 
-// A bunch of things from this import need 'global' and 'process'.
+// A bunch of things from this import need 'global', 'process', and 'EventEmitter'.
 prependFiles(
   "blob-stream",
   `
     window.global = window;
-    window.process = require('process/browser');
+    window.process = require('process');
+    window.EventEmitter = require('events');
   `
 );
 
-// Buffer a go go
+// Buffer a go go.
+// We're shimming every file individually in this case because
+// they get resolved in a non-deterministic order, so it's easiest
+// to just get them all individually.
 prependFiles(
   [
     "@react-pdf/pdfkit/lib/pdfkit.browser.es.js",

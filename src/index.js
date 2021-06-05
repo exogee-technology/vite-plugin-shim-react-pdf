@@ -14,7 +14,12 @@ module.exports = () => ({
     //
     // I agree, and we should be working to actually fix React PDF
     // but this shim keeps us working as we do.
-    config.resolve.alias.stream = "stream-browserify";
-    config.resolve.alias.zlib = "browserify-zlib";
+	config.resolve.alias = {
+		...config.resolve.alias,
+
+		process: "process/browser",
+		stream: "stream-browserify",
+		zlib = "browserify-zlib"
+	}
   },
 });
