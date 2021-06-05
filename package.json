@@ -13,6 +13,7 @@
   "dependencies": {
     "browserify-zlib": "0.2.0",
     "buffer": "6.0.3",
+    "iconv-lite": "0.6.3",
     "process": "0.11.10",
     "stream-browserify": "3.0.0"
   },

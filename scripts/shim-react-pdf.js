@@ -6,6 +6,16 @@ const fs = require("fs");
 
 const banner = "/* Injected by vite-plugin-shim-react-pdf */";
 
+try {
+  require.resolve("@react-pdf/renderer");
+} catch {
+  console.warn();
+  console.warn("Could not resolve @react-pdf/renderer, is it installed?");
+  console.warn("Skipping patching...");
+  console.warn();
+  process.exit(0);
+}
+
 const prependFile = (nodeResolutionPath, prependContent) => {
   const path = require.resolve(nodeResolutionPath);
   const contents = fs.readFileSync(path, { encoding: "utf-8" });
