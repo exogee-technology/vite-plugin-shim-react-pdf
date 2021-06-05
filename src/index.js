@@ -18,7 +18,7 @@ module.exports = () => ({
       ...config.resolve.alias,
 
       process: "process/browser",
-      stream: "stream-browserify",
+      stream: "readable-stream",
       zlib: "browserify-zlib",
     };
   },
