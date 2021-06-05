@@ -50,7 +50,10 @@ prependFiles(
 
 // Buffer a go go
 prependFiles(
-  "@react-pdf/pdfkit/lib/pdfkit.browser.es.js",
+  [
+    "@react-pdf/pdfkit/lib/pdfkit.browser.es.js",
+    "@react-pdf/fontkit/lib/fontkit.browser.es.js",
+  ],
   "import { Buffer } from 'buffer';"
 );
 prependFiles(
