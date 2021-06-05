@@ -16,25 +16,31 @@ try {
   process.exit(0);
 }
 
-const prependFile = (nodeResolutionPath, prependContent) => {
-  const path = require.resolve(nodeResolutionPath);
-  const contents = fs.readFileSync(path, { encoding: "utf-8" });
+const prependFiles = (nodeResolutionPaths, prependContent) => {
+  if (!Array.isArray(nodeResolutionPaths)) {
+    nodeResolutionPaths = [nodeResolutionPaths];
+  }
 
-  if (!contents.startsWith(banner)) {
-    console.log(`Patching '${nodeResolutionPath}'...`);
-    fs.writeFileSync(
-      path,
-      `${banner}
+  for (const nodeResolutionPath of nodeResolutionPaths) {
+    const path = require.resolve(nodeResolutionPath);
+    const contents = fs.readFileSync(path, { encoding: "utf-8" });
+
+    if (!contents.startsWith(banner)) {
+      console.log(`Patching '${nodeResolutionPath}'...`);
+      fs.writeFileSync(
+        path,
+        `${banner}
        ${prependContent}
        ${contents}`
-    );
-  } else {
-    console.log(` - Skipping '${nodeResolutionPath}', already patched...`);
+      );
+    } else {
+      console.log(` - Skipping '${nodeResolutionPath}', already patched...`);
+    }
   }
 };
 
 // A bunch of things from this import need 'global' and 'process'.
-prependFile(
+prependFiles(
   "blob-stream",
   `
     window.global = window;
@@ -43,17 +49,7 @@ prependFile(
 );
 
 // Buffer a go go
-prependFile(
-  "restructure",
-  `
-    const { Buffer } = require('buffer');
-    window.Buffer = Buffer;
-  `
-);
-prependFile(
-  "@react-pdf/renderer",
-  `
-    const { Buffer } = require('buffer');
-    window.Buffer = Buffer;
-  `
+prependFiles(
+  ["restructure/src/DecodeStream.js", "restructure/src/EncodeStream.js"],
+  `const { Buffer } = require('buffer');`
 );
