@@ -5,7 +5,8 @@ Adds necessary shims so that React PDF can be used with Vite.
 ## Usage
 
 ```console
-$ yarn add @react-pdf/renderer vite-plugin-shim-react-pdf
+$ yarn add @react-pdf/renderer
+$ yarn add --dev vite-plugin-shim-react-pdf
 ```
 
 Then in `vite.config.js`:
