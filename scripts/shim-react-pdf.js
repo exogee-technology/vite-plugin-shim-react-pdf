@@ -43,9 +43,11 @@ const prependFiles = (nodeResolutionPaths, prependContent) => {
 prependFiles(
   "blob-stream",
   `
+  if (typeof window !== 'undefined') {
     window.global = window;
     window.process = require('process');
     window.EventEmitter = require('events');
+  }
   `
 );
 
