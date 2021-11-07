@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-shim-react-pdf",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A shim that allows React PDF to be used with Vite",
   "main": "src/index.js",
   "repository": "https://github.com/TechInSite/vite-plugin-shim-react-pdf.git",
