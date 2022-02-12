@@ -43,6 +43,12 @@ const prependFiles = (nodeResolutionPaths, prependContent) => {
 prependFiles(
   "blob-stream",
   `
+  if (typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope) {
+    // inside a web worker, the global scope is called "self"
+    self.global = self
+    self.window = self
+  }
+  
   if (typeof window !== 'undefined') {
     window.global = window;
     window.process = require('process');
