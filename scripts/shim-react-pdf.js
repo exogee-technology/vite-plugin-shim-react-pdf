@@ -66,7 +66,6 @@ prependFiles(
     "@react-pdf/pdfkit/lib/pdfkit.browser.es.js",
     "@react-pdf/fontkit/lib/fontkit.browser.es.js",
     "@react-pdf/png-js/lib/png-js.browser.es.js",
-    "@react-pdf/unicode-properties/lib/unicode-properties.es.js",
   ],
   "import { Buffer } from 'buffer';"
 );
