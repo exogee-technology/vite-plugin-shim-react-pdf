@@ -71,8 +71,8 @@ prependFiles(
 );
 prependFiles(
   [
-    "@react-pdf/font/lib/index.browser.js",
-    "@react-pdf/image/lib/index.browser.js",
+    "@react-pdf/font/lib/index.browser.es.js",
+    "@react-pdf/image/lib/index.browser.es.js",
     "restructure/src/DecodeStream.js",
     "restructure/src/EncodeStream.js",
     "restructure/src/String.js",
