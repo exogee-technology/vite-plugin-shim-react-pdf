@@ -22,6 +22,6 @@
   },
   "peerDependencies": {
     "@react-pdf/renderer": "^2.0.0",
-    "vite": "^2.0.0"
+    "vite": "^2.0.0 || ^3.0.0"
   }
 }
