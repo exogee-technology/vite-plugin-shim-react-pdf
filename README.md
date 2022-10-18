@@ -1,3 +1,7 @@
+# DEPRECATED
+
+This is no longer necessary. Simply use `@react-pdf/renderer >= 3.0.0` and it should work out of the box. Thanks @carlobeltrame for your work upstream so that React PDF works with modern bundlers out of the box!
+
 # vite-plugin-shim-react-pdf
 
 Adds necessary shims so that React PDF can be used with Vite.
